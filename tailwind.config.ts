@@ -57,6 +57,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        blockchain: {
+          primary: "hsl(var(--blockchain-primary))",
+          secondary: "hsl(var(--blockchain-secondary))",
+          accent: "hsl(var(--blockchain-accent))",
+        },
+        success: "hsl(var(--success))",
+        warning: "hsl(var(--warning))",
+        info: "hsl(var(--info))",
       },
       borderRadius: {
         lg: "var(--radius)",
