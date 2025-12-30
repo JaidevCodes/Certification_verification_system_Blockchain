@@ -1,0 +1,93 @@
+/* App.css - Custom styles for CertChain application */
+
+/* Certificate verification animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseSuccess {
+
+  0%,
+  100% {
+    background-color: rgba(34, 197, 94, 0.1);
+  }
+
+  50% {
+    background-color: rgba(34, 197, 94, 0.2);
+  }
+}
+
+@keyframes pulseError {
+
+  0%,
+  100% {
+    background-color: rgba(239, 68, 68, 0.1);
+  }
+
+  50% {
+    background-color: rgba(239, 68, 68, 0.2);
+  }
+}
+
+/* Component-specific styles */
+.certificate-result-enter {
+  animation: slideInUp 0.5s ease-out;
+}
+
+.verification-success {
+  animation: pulseSuccess 2s ease-in-out;
+}
+
+.verification-error {
+  animation: pulseError 2s ease-in-out;
+}
+
+/* Custom file input styling */
+.file-input-custom {
+  @apply block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100 transition-colors duration-200;
+}
+
+/* Loading spinner */
+.loading-spinner {
+  @apply animate-spin rounded-full h-6 w-6 border-b-2 border-white;
+}
+
+/* Glass morphism effect */
+.glass-effect {
+  @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-2xl;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+}
+
+/* Hover lift effect */
+.hover-lift {
+  @apply transition-transform duration-200 hover:-translate-y-1;
+}
+
+/* Focus states for accessibility */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+/* Print styles for certificates */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .certificate-print {
+    box-shadow: none !important;
+    border: 2px solid #000 !important;
+  }
+}
