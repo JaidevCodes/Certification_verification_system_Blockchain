@@ -130,7 +130,7 @@ CertChain/
 │   └── vite.config.ts
 │
 └── README.md
-```text
+```
 ---
 
 ## 🚀 Deployment
