@@ -105,16 +105,29 @@ This project was developed as a **Final Year Major Project** under the guidance 
 
 ## 📁 Project Structure
 CertChain/
-├── backend/
-│ ├── index.js
-│ ├── contractAbi.json
-│ ├── uploads/
-│ └── .env (ignored)
-├── frontend/
-│ ├── src/
-│ ├── components/
-│ └── pages/
-└── README.md
+├── backend/                      # Express + MongoDB + Blockchain APIs
+│   ├── index.js                  # Main backend server entry point
+│   ├── contractAbi.json          # Smart contract ABI
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── testPinata.js             # IPFS/Pinata testing script
+│   ├── uploads/                  # Temporary PDF uploads
+│   └── .env                      # Environment variables (gitignored)
+│
+├── frontend/                     # React + TypeScript application
+│   ├── src/
+│   │   ├── App.tsx
+│   │   ├── main.tsx
+│   │   ├── components/
+│   │   │   ├── IssuerPanel.tsx
+│   │   │   ├── VerifierPanel.tsx
+│   │   │   └── StudentPanel.tsx
+│   │   └── pages/
+│   ├── public/
+│   ├── package.json
+│   └── vite.config.ts
+│
+└── README.md                     # Project documentation
 
 ---
 
